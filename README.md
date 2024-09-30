@@ -1,5 +1,5 @@
 # Olá, eu sou Jeanne
-- 👨🏿‍🏫 Atualmente estudo na instituicao Senac-DF
+- 👨🏿‍🏫 Atualmente estudo na instituição Senac-DF
 - 🧑🏿‍💻 Trabalho com Figma, Desenvolvimento Front-End, Java, Python, Power BI e Banco de Dados
 - 📽️ Procuro colaborar no desenvolvimento de projetos
 - 🧑🏿‍💻 Pergunte-me sobre Desenvolvimento de Sistemas
