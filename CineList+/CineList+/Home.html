@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine List+</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+ 
+         <div class="logo">
+            <img src="Imagem/logo/logo.png" alt="Cine List+">CineList+
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar títulos">
+        </div>
+
+
+
+    <div class="dropdown"></div>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Animes</a></li>
+            <li><a class="dropdown-item" href="#">Filmes</a></li>
+            <li><a class="dropdown-item" href="#">Séries</a></li>
+        </ul>
+
+
+        <div class="dropdown"></div>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Listas </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Ja Assitir</a></li>
+            <li><a class="dropdown-item" href="#">  Quero Assistir</a></li>
+     
+        </ul>
+
+
+        <div class="dropdown"></div>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Conta</button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Login</a></li>
+            <li><a class="dropdown-item" href="#">Cadastro</a></li>
+            <li><a class="dropdown-item" href="#">Configuracoes</a></li>
+        </ul>
+
+    </header>
+
+    <main>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./Imagem/principal/elementos.png" class="d-block w-100" alt="images1">
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <p> Elementos: 2023 ‧ Infantil/Comédia ‧ 1h 49m
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./Imagem/principal/eragon.png" class="d-block w-100" alt="images2">
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Imagem/principal/godzilla.png" class="d-block w-100" alt="images3">
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./Imagem/principal/luciper.png" class="d-block w-100" alt="images4">
+                    <div class="carousel-caption d-none d-md-block">
+
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+</body>
+
+
+<section class="genres">
+    <h2>Gêneros</h2>
+    <div class="genre-buttons">
+        <button>Ação</button>
+        <button>Animacao</button>
+        <button>Drama</button>
+        <button>Terror</button>
+        <button>Fantasia</button>
+        <button>Romance</button>
+        <button>Aventura</button>
+        <button>Comédia</button>
+        <button>Infantil</button>
+        <button>Ficcao cientifica</button>
+        <button>Suspense</button>
+        <button>Documentário</button>
+        <button>Musical</button>
+        <button>Guerra</button>
+
+
+
+
+    </div>
+</section>
+
+<section class="trending">
+    <h2>Em Alta</h2>
+    <div class="carousel-container">
+        <button class="carousel-btn left-btn">
+            <p><</p>
+        </button>
+        <div class="movies-wrapper">
+            <div class="movies">
+                <div class="movie">
+                    <img src="Imagem/Filmes/cruella.png" alt="Cruella">
+                    <p>Cruella</p>
+                    <p>⭐ 4.5 ( 50 avaliacoes)</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/thegrimm.png" alt="Os Irmãos Grimm">
+                    <p>Os Irmãos Grimm </p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Series/emilyinparis.png" alt="Emily em Paris">
+                    <p>Emily em Paris</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/sololeveling.png" alt="Solo Leveling">
+                    <p>Solo Leveling</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Series/arcane.png" alt="Arcane">
+                    <p>Arcane</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Filmes/american.png" alt="American Murderer">
+                    <p>American Murderer</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Series/wandinha.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <!-- Adicione mais filmes aqui -->
+                <div class="movie">
+                    <img src="Imagem/Animes/hirimiya.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn right-btn">></button>
+    </div>
+    <!--link ver mais-->
+    <div class="vermais">
+    <a href="https://www.themoviedb.org/trending?language=pt-BR&time=week" id="vermais">Veja mais</a>
+  </div>
+</section>
+
+
+
+
+
+<section class="trending">
+    <h2>Animes</h2>
+    <div class="carousel-container">
+        <button class="carousel-btn left-btn">⬅️</button>
+        <div class="movies-wrapper">
+            <div class="movies">
+                <div class="movie">
+                    <img src="Imagem/Animes/another.png" alt="Cruella">
+                    <p>Cruella</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/frieren.png" alt="Os Irmãos Grimm">
+                    <p>Os Irmãos Grimm </p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/hirimiya.png" alt="Emily em Paris">
+                    <p>Emily em Paris</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/naruto.png" alt="Solo Leveling">
+                    <p>Solo Leveling</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/sololeveling.png" alt="Arcane">
+                    <p>Arcane</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/slime.png" alt="American Murderer">
+                    <p>American Murderer</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/thegrimm.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <!-- Adicione mais filmes aqui -->
+                <div class="movie">
+                    <img src="Imagem/Animes/hirimiya.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/hirimiya.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn right-btn">➡️</button>
+    </div>
+    <div class="vermais">
+        <a href="https://www.themoviedb.org/trending?language=pt-BR&time=week" id="vermais">Veja mais</a>
+      </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="trending">
+    <h2>Filmes</h2>
+    <div class="carousel-container">
+        <button class="carousel-btn left-btn">⬅️</button>
+        <div class="movies-wrapper">
+            <div class="movies">
+                <div class="movie">
+                    <img src="Imagem/Filmes/cruella.png" alt="Cruella">
+                    <p>Cruella</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Filmes/aladdin.png" alt="Os Irmãos Grimm">
+                    <p>Os Irmãos Grimm </p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Filmes/american.png" alt="Emily em Paris">
+                    <p>Emily em Paris</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Filmes/falllout.png" alt="Solo Leveling">
+                    <p>Solo Leveling</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Filmes/fastmav.png" alt="Arcane">
+                    <p>Arcane</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Filmes/furiosa.png" alt="American Murderer">
+                    <p>American Murderer</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Filmes/jogosvorazespassaro.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <!-- Adicione mais filmes aqui -->
+                <div class="movie">
+                    <img src="Imagem/Filmes/johnwick3.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/hirimiya.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn right-btn">➡️</button>
+    </div>
+    <div class="vermais">
+        <a href="https://www.themoviedb.org/trending?language=pt-BR&time=week" id="vermais">Veja mais</a>
+      </div>
+</section>
+
+
+
+
+
+
+<section class="trending">
+    <h2>Series</h2>
+    <div class="carousel-container">
+        <button class="carousel-btn left-btn">⬅️</button>
+        <div class="movies-wrapper">
+            <div class="movies">
+                <div class="movie">
+                    <img src="Imagem/Series/arcane.png" alt="Cruella">
+                    <p>Cruella</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Series/arrow.png" alt="Os Irmãos Grimm">
+                    <p>Os Irmãos Grimm</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Series/emilyinparis.png" alt="Emily em Paris">
+                    <p>Emily em Paris</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Series/flash.png" alt="Solo Leveling">
+                    <p>Solo Leveling</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Series/lacasadepapel.png" alt="Arcane">
+                    <p>Arcane</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Series/wandinha.png" alt="American Murderer">
+                    <p>American Murderer</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Series/wandinha.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <!-- Adicione mais filmes aqui -->
+                <div class="movie">
+                    <img src="Imagem/Animes/hirimiya.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+                <div class="movie">
+                    <img src="Imagem/Animes/hirimiya.png" alt="Wandinha">
+                    <p>Wandinha</p>
+                    <p>⭐ 4.5</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn right-btn">➡️</button>
+    </div>
+    <div class="vermais">
+        <a href="https://www.themoviedb.org/trending?language=pt-BR&time=week" id="vermais">Veja mais</a>
+      </div>
+     
+</section>
+
+
+
+
+
+</main>
+
+
+<footer>
+    <p>CineList+ &copy; 2024. Todos os direitos reservados.</p>
+    <div class="social-media">
+        <a href="#"><img src="Imagem/logo/Facebook_icon.svg" alt="Facebook">Facebook</a>
+        <a href="#"><img src="Imagem/logo/Instagram_icon.png" alt="Instagram">Instagram</a>
+
+    </div>
+    <div class="terms">
+        <a href="#">Termos de uso</a>
+        <a href="#">Política de privacidade</a>
+    </div>
+    <div class="contact">
+        <a href="mailto:contato@cinelist+.com">Contato: contato@cinelist+.com</a>
+    </div>
+
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        // Função para mostrar o slide atual
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        // Função para ir ao próximo slide
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Inicialize mostrando o primeiro slide
+        showSlide(currentSlide);
+
+        // Alterne para o próximo slide automaticamente a cada 5 segundos
+        setInterval(nextSlide, 5000);
+    });
+
+</script>
+
+<script>
+    // Função para inicializar os carrosséis
+    function initCarousel(sectionId) {
+        const carouselContainer = document.querySelector(`#${sectionId} .carousel-container`);
+        const leftBtn = carouselContainer.querySelector('.left-btn');
+        const rightBtn = carouselContainer.querySelector('.right-btn');
+        const movies = carouselContainer.querySelector('.movies');
+
+        let scrollAmount = 0;
+        const scrollStep = 200; // Valor de rolagem por clique
+
+        // Botão esquerdo
+        leftBtn.addEventListener('click', () => {
+            movies.scrollBy({
+                left: -scrollStep,
+                behavior: 'smooth'
+            });
+        });
+
+        // Botão direito
+        rightBtn.addEventListener('click', () => {
+            movies.scrollBy({
+                left: scrollStep,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Inicializa carrosséis para "Animes", "Filmes" e "Séries"
+    document.addEventListener('DOMContentLoaded', () => {
+        initCarousel('animes');
+        initCarousel('filmes');
+        initCarousel('series');
+    });
+
+</script>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const leftBtn = document.querySelector('.left-btn');
+        const rightBtn = document.querySelector('.right-btn');
+        const moviesWrapper = document.querySelector('.movies-wrapper');
+
+        rightBtn.addEventListener('click', () => {
+            moviesWrapper.scrollBy({ left: moviesWrapper.clientWidth, behavior: 'smooth' });
+        });
+
+        leftBtn.addEventListener('click', () => {
+            moviesWrapper.scrollBy({ left: -moviesWrapper.clientWidth, behavior: 'smooth' });
+        });
+    });
+
+</Script>
+<script>
+    document.querySelectorAll('.carousel-container').forEach(container => {
+        const leftBtn = container.querySelector('.left-btn');
+        const rightBtn = container.querySelector('.right-btn');
+        const moviesWrapper = container.querySelector('.movies-wrapper');
+
+        rightBtn.addEventListener('click', () => {
+            moviesWrapper.scrollBy({ left: moviesWrapper.clientWidth, behavior: 'smooth' });
+        });
+
+        leftBtn.addEventListener('click', () => {
+            moviesWrapper.scrollBy({ left: -moviesWrapper.clientWidth, behavior: 'smooth' });
+        });
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+
+
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  background-image: url("Imagem/logo/logo1.png");
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #900000;
+}
+
+.titulo h1 {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+}
+/*alterar cor do botao categoria para vermelho use esse codigo como base*/
+#dropdownMenuButton  {
+  background-color: #900000;
+  color: white;
+border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+/*distacia do botao para o outro botao*/ 
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;font-family:Georgia, 'Times New Roman', Times, serif;
+}
+        
+.logo img {
+  height: 90px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  padding: -30px;
+  margin-top: -20px;
+  margin-bottom: -15px;
+
+ 
+}
+
+*.search-bar input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  color: #000;
+  
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+
+
+.user-options .icon {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.genres {
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.genres h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.genre-buttons button {
+  background-color: #900000;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.genre-buttons button:hover {
+  background-color: #b30000;
+}
+
+.trending {
+  padding: 20px;
+}
+
+.trending h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.movies {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #ffffff;
+
+
+}
+
+.movie {
+  text-align: center;
+}
+
+.movie img {
+  width: 225px;
+  height: 330px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+
+}
+
+.movie p {
+  font-size: 1em;
+}
+
+.movie p:last-child {
+  color: rgb(255, 255, 255);
+}
+
+footer {
+  background-color: #900000;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  position: flex;
+  bottom: 0;
+  margin-top: 45px;
+  width: 100%;
+
+  /*mudar cor do link*/
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /*colocar footer no final da panina*/
+
+}
+
+
+
+.social-media {
+  display: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+
+  /*alterar tamanho da imagem*/
+  img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+}
+
+.banner {
+  width: 100%;
+  /*alinhar imagem ao centro*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: none;
+  /* Todos os slides são escondidos inicialmente */
+}
+
+.slide.active {
+  display: block;
+  /* Exibir apenas o slide ativo */
+}
+
+.banner img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+#carouselExampleDark .carousel-inner {
+  width: 35%;
+  margin-top: 60px;
+  right: -618px;
+}
+
+
+
+
+.carousel-control-prev-icon  {
+  background-color: #900000;
+ 
+  margin-left: 1000px;
+  padding: 20px;
+  border-radius: 50%;
+
+}
+.carousel-control-next-icon{
+  background-color: #900000;
+  margin-left: -1000px;
+  padding: 20px;
+  border-radius: 50%;
+
+}
+.carousel-caption p {
+ /*cor de fundo  preto transparent*/
+  background-color: #1a1a1a ;
+  color: white;
+  opacity: 0.5;
+}
+/* Container do carrossel */
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Esconde o que está fora da área visível */
+  width: 100%; /* Faz com que o contêiner ocupe toda a largura disponível */
+}
+
+/* Área de rolagem dos filmes */
+.movies {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: max-content; /* Mantém a largura do conteúdo com base nos itens dentro */
+}
+
+/* Cada filme individual */
+.movie {
+  min-width: 200px; /* Ajuste de largura mínima */
+  margin: 0 10px; /* Margem entre filmes */
+  text-align: center;
+  background-color:#0e0e0e;
+  border-radius: 15px;
+}
+
+/* Botões de navegação */
+
+.left-btn {
+  left: 10px;
+  background-color: none;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: none;
+
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent; /* Cor de fundo transparente */
+  border: none; /* Remove a borda */
+  color: white; /* Cor do ícone ou texto (as setas) */
+  font-size: 2rem; /* Tamanho da seta */
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px; /* Um espaçamento interno para facilitar o clique */
+}
+
+
+
+
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.movies-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.movies {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: max-content; /* Expande conforme o conteúdo */
+}
+
+.movie {
+  min-width: 200px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+background-color: none;
+  border: none;
+  color: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.left-btn {
+  left: 0;
+  background-color:#900000;
+  color: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.left-btn p {
+  margin-left: -5px;
+  margin-top: -18px;
+}
+
+.right-btn {
+  right: 0;
+  background-color: none;
+}
+
+#vermais {
+  background-color: #900000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+}
+.vermais {
+  margin-top: 20px;
+  /*alinhr para canto da direita*/
+  position: absolute;
+  right: 0;
+  margin-right: 60px;
+ 
+} 
+
