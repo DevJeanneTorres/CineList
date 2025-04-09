@@ -5,23 +5,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funcionários | CineList+</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">
             <img src="logo.png" alt="Cine List+">
-            <h2>CineList+: Painel do Gerente </h2>
-            <ul>
-                <li><a href="#" id="linkHome"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#" id="linkVisualizar">Visualizar Funcionários</a></li>
-                <li><a href="#" id="linkAdicionar">Adicionar Funcionário</a></li>
-                <li><a href="#" id="linkAdicionar">Exibir Relatorio</a></li>
-            </ul>
-        </div>
-    </nav>
+            <h2>CineList+: Painel do Gerente</h2>
+       
+        <ul>
+            <li><a href="#" id="linkVisualizar">Visualizar Funcionários</a></li>
+            <li><a href="#" id="linkAdicionar">Adicionar Funcionário</a></li>
+            <li><a href="#" id="linkRelatorio">Exibir Relatório</a></li>
+        </ul>
+    </nav> </div>
+    
 
     <div class="container">
         <section id="secaoVisualizar">
@@ -32,62 +31,116 @@
         <section id="secaoAdicionar" style="display:none;">
             <h1>Cadastrar Novo Funcionário</h1>
             <form id="formFuncionario">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" required />
-
-                <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" required />
-
-                <label for="email">Email Pessoal:</label>
-                <input type="email" id="email" name="email" required />
-
-                <label for="emailCorp">Email Corporativo:</label>
-                <input type="email" id="emailCorp" name="emailCorp" required />
-
-                <label for="cargo">Cargo:</label>
-                <select id="cargo" name="cargo" required>
-                    <option value="">Selecione</option>
-                    <option value="Auxiliar Administrativo">Auxiliar Administrativo</option>
-                    <option value="Gerente de Conteúdo">Gerente de Conteúdo</option>
-                    <option value="Técnico de Suporte">Técnico de Suporte</option>
-                </select>
-
-                <label for="dataNascimento">Data de Nascimento:</label>
-                <input type="date" id="dataNascimento" name="dataNascimento" required />
-
-                <label for="dataContratacao">Data de Contratação:</label>
-                <input type="date" id="dataContratacao" name="dataContratacao" required />
-
-                <label for="situacao">Situação:</label>
-                <select id="situacao" name="situacao" required>
-                    <option value="ativo">Ativo</option>
-                    <option value="inativo">Inativo</option>
-                </select>
-
-                <div id="campoDemissao" style="display: none;">
-                    <label for="dataDemissao">Data de Demissão:</label>
-                    <input type="date" id="dataDemissao" name="dataDemissao" />
+              <!-- Informações Pessoais -->
+              <fieldset>
+                <legend>Informações Pessoais</legend>
+                <div class="linha">
+                  <div><label for="nome">Nome:</label><input type="text" id="nome" name="nome" required></div>
+                  <div><label for="cpf">CPF:</label><input type="text" id="cpf" name="cpf" required>
+                  <label for="rg">RG:</label><input type="text" id="rg" name="rg" required></div>
                 </div>
-
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required />
-
-                <button type="submit">Cadastrar Funcionário</button>
+                <div class="linha">
+                  <div><label for="dataNascimento">Data de Nascimento:</label><input type="date" id="dataNascimento" name="dataNascimento" required></div>
+                  <div><label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo" required>
+                      <option value="">Selecione</option>
+                      <option value="feminino">Feminino</option>
+                      <option value="masculino">Masculino</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                    <label for="estadoCivil">Estado Civil:</label>
+                    <select id="estadoCivil" name="estadoCivil" required>
+                      <option value="">Selecione</option>
+                      <option value="solteiro">Solteiro(a)</option>
+                      <option value="casado">Casado(a)</option>
+                      <option value="divorciado">Divorciado(a)</option>
+                      <option value="viuvo">Viúvo(a)</option>
+                    </select>
+                 
+                  </div>
+                </div>
+                <div class="linha">
+                  <div><label for="telefone">Telefone:</label><input type="tel" id="telefone" name="telefone" required>
+                  <label for="email">Email Pessoal:</label><input type="email" id="email" name="email" required></div>
+                </div>
+              </fieldset>
+          
+              <!-- Informações Corporativas -->
+              <fieldset>
+                <legend>Informações Corporativas</legend>
+                <div class="linha">
+                  <div><label for="emailCorp">Email Corporativo:</label><input type="email" id="emailCorp" name="emailCorp" required>
+                  <label for="cargo">Cargo:</label>
+                    <select id="cargo" name="cargo" required>
+                      <option value="">Selecione</option>
+                      <option value="Auxiliar Administrativo">Auxiliar Administrativo</option>
+                      <option value="Gerente de Conteúdo">Gerente de Conteúdo</option>
+                      <option value="Técnico de Suporte">Técnico de Suporte</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="linha">
+                  <div><label for="dataContratacao">Data de Contratação:</label><input type="date" id="dataContratacao" name="dataContratacao" required></div>
+                  <div><label for="situacao">Situação:</label>
+                    <select id="situacao" name="situacao" required>
+                      <option value="ativo">Ativo</option>
+                      <option value="inativo">Inativo</option>
+                    </select>
+                  </div>
+                  <div id="campoDemissao" style="display: none;">
+                    <label for="dataDemissao">Data de Demissão:</label><input type="date" id="dataDemissao" name="dataDemissao">
+                  </div>
+                </div>
+                <div class="linha">
+                    <div id="campoSenha"><label for="senha">Senha:</label><input type="password" id="senha" name="senha"></div>
+                  <div><label for="foto">Foto 3x4:</label><input type="file" id="foto" name="foto" accept="image/*"></div>
+                  
+                </div>
+              </fieldset>
+          
+              <!-- Endereço -->
+              <fieldset>
+                <legend>Endereço</legend>
+                <div class="linha">
+                  <div><label for="rua">Rua:</label><input type="text" id="rua" name="rua" required></div>
+                  <div><label for="numero">Número:</label><input type="text" id="numero" name="numero" required>
+                  <label for="cep">CEP:</label><input type="text" id="cep" name="cep" required></div>
+                </div>
+                <div class="linha">
+                  <div><label for="cidade">Cidade:</label><input type="text" id="cidade" name="cidade" required>
+                  <label for="estado">Estado:</label><input type="text" id="estado" name="estado" required></div>
+                </div>
+              </fieldset>
+          
+              <!-- Dados Bancários -->
+              <fieldset>
+                <legend>Dados Bancários</legend>
+                <div class="linha">
+                  <div><label for="banco">Banco:</label><input type="text" id="banco" name="banco" required>
+                  <label for="agencia">Agência:</label><input type="text" id="agencia" name="agencia" required>
+                  <label for="conta">Conta:</label><input type="text" id="conta" name="conta" required></div>
+                </div>
+              </fieldset>
+          
+              <button type="submit" id="submitBtn">Cadastrar Funcionário</button>
+              <div id="mensagem"></div>
             </form>
-            <div id="mensagem"></div>
-        </section>
+          </section>
     </div>
 
     <script>
         const selectSituacao = document.getElementById('situacao');
         const campoDemissao = document.getElementById('campoDemissao');
+        const campoSenha = document.getElementById('campoSenha');
 
         selectSituacao.addEventListener('change', () => {
-            if (selectSituacao.value === 'inativo') {
-                campoDemissao.style.display = 'block';
-            } else {
-                campoDemissao.style.display = 'none';
-            }
+            campoDemissao.style.display = selectSituacao.value === 'inativo' ? 'block' : 'none';
+        });
+
+        const linkAdicionar = document.querySelector('#linkAdicionar');
+        const linkRelatorio = document.querySelector('#linkRelatorio');
+        linkAdicionar.addEventListener('click', () => {
+            campoSenha.style.display = 'block';
         });
     </script>
     <script src="script.js"></script>

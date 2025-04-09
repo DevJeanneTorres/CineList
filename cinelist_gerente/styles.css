@@ -10,18 +10,18 @@ body {
 
 .navbar {
     background-color: #900000;
-    color: white; 
-    padding: 15px;
+    color: white;
     width: 100%;
     text-align: center;
 }
 
 .navbar ul {
     list-style-type: none;
-    padding: center;
+    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin: 0;
 }
 
 .navbar li a {
@@ -31,11 +31,11 @@ body {
 }
 
 .container {
-    background-color:#fff;
+    background-color: #fff;
     border-radius: 12px;
     padding: 30px;
     width: 100%;
-    max-width: 500px;
+    max-width: 900px; /* aumentei o limite de largura */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
@@ -51,19 +51,50 @@ form {
     flex-direction: column;
 }
 
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    color: #900000;
+    padding: 0 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group .form-field {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group .form-field.wide {
+    flex: 100%;
+}
+
 label {
     margin-bottom: 5px;
     color: #333;
     font-weight: 600;
+    
 }
 
-input,
-select {
+input,select {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
+    
 }
 
 button {
@@ -78,7 +109,7 @@ button {
 }
 
 button:hover {
-    background-color: #900000;
+    background-color: #a10000;
 }
 
 #mensagem {
@@ -96,4 +127,9 @@ button:hover {
 .logo img {
     height: 100px;
     width: auto;
+}
+
+#listaFuncionarios {
+    list-style: none;
+    padding: 0;
 }
