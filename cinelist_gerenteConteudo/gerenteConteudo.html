@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerente de Conteúdo | CineList+</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Cine List+">
+            <h2>CineList+: Gerente de Conteúdo </h2>
+            <ul>
+                <li><a href="#" id="linkHome"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#" id="linkVisualizar">Visualizar Títulos</a></li>
+                <li><a href="#" id="linkAdicionar">Adicionar Títulos</a></li>
+                <li><a href="#" id="linkRelatorio">Exibir Relatorio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="secaoVisualizar">
+            <h1>Títulos Cadastrados</h1>
+            <ul id="listaTitulos"></ul>
+        </section>
+
+        <section id="secaoAdicionar" style="display:none;">
+            <h1>Cadastrar Novo Título</h1>
+            <!-- Substitua seu <form> atual por este trecho -->
+
+            <form id="formTitulo">
+                <label for="nome">Nome do Título:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite o nome do título"/>
+
+                <label for="conteudo">Conteúdo:</label>
+                <select id="conteudo" name="conteudo" required>
+                    <option value="">Selecione</option>
+                    <option value="Filme">Filme</option>
+                    <option value="Serie">Serie</option>
+                    <option value="Anime">Anime</option>
+                </select>
+
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Selecione</option>
+                    <option value="Ação e Aventura">Ação e Aventura</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Ficção Científica">Ficção Científica</option>
+                    <option value="Terror">Terror</option>
+                </select>
+
+                <label for="sinopse">Sinopse:</label>
+                <textarea name="sinopse" id="sinopse" cols="30" rows="10"></textarea>
+
+                <div id="campoFilme" style="display:none;">
+                    <label for="duracaoFilme">Duração (min):</label>
+                    <input type="number" id="duracaoFilme" name="duracaoFilme" />
+                </div>
+
+                <div id="campoSerieAnime" style="display:none;">
+                    <div>
+                        <label for="temporada">Temporadas:</label>
+                        <input type="text" id="temporada" name="temporada" />
+                    </div>
+                
+                    <div>
+                        <label for="episodio">Episódios:</label>
+                        <input type="text" id="episodio" name="episodio" />
+                    </div>
+                
+                    <div>
+                        <label for="duracaoEpisodio">Duração do Episódio (min):</label>
+                        <input type="number" id="duracaoEpisodio" name="duracaoEpisodio" />
+                    </div>
+                </div>                
+
+                <label for="classificacaoIndicativa">Classificação Indicativa:</label>
+                <select id="classificacaoIndicativa" name="classificacaoIndicativa" required>
+                    <option value="Livre">Livre</option>
+                    <option value="+8">+8 Anos</option>
+                    <option value="+12">+12 Anos</option>
+                    <option value="+16">+16 Anos</option>
+                    <option value="+18">+18 Anos</option>
+                </select>
+
+                <label for="cartaz">Adicione o cartaz do título</label>
+                <input type="file" id="cartaz">
+
+                <button type="submit">Cadastrar Título</button>
+            </form>
+            <div id="mensagem"></div>
+
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
