@@ -10,8 +10,8 @@ body {
 
 .navbar {
     background-color: #900000;
-    color: white;
-    rgb(90, 0, 0) padding: 15px;
+    color: white; 
+    padding: 15px;
     width: 100%;
     text-align: center;
 }
@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color:#fff;
     border-radius: 12px;
     padding: 30px;
     width: 100%;
