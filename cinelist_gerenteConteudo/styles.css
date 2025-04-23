@@ -136,3 +136,53 @@ button:hover {
     border-radius: 5px;
     width: 10%;
 }
+
+#listaTitulos {
+    list-style: none;
+    padding: 0;
+}
+
+.titulo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000040;
+}
+
+.titulo-item .info {
+    flex: 2;
+}
+
+.titulo-item .info h3 {
+    margin: 0 0 10px;
+}
+
+.titulo-item .cartaz {
+    flex: 1;
+    text-align: right;
+}
+
+.titulo-item .cartaz img {
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+.botoes button {
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botoes button:hover {
+    background-color: #ff9100;
+}

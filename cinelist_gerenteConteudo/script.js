@@ -19,8 +19,11 @@ form.addEventListener('submit', function (e) {
     const temporada = document.getElementById('temporada').value;
     const episodio = document.getElementById('episodio').value;
     const classificacaoIndicativa = document.getElementById('classificacaoIndicativa').value;
+    const cartazInput = document.getElementById('cartaz');
+    const cartaz = cartazInput.files[0] ? URL.createObjectURL(cartazInput.files[0]) : '';
 
-    if (!nome || !conteudo || !genero || !sinopse || !temporada || !episodio || !classificacaoIndicativa) {
+
+    if (!nome || !conteudo || !genero || !sinopse || !temporada || !episodio || !classificacaoIndicativa || !cartaz) {
         mensagem.style.color = '#d32f2f';
         mensagem.textContent = 'Por favor, preencha todos os campos obrigatórios.';
         return;
@@ -34,6 +37,7 @@ form.addEventListener('submit', function (e) {
         temporada,
         episodio,
         classificacaoIndicativa,
+        cartaz
     };
 
     if (editandoIndice !== null) {
@@ -56,17 +60,31 @@ function atualizarLista() {
 
     titulos.forEach((t, index) => {
         const item = document.createElement('li');
+        item.classList.add('titulo-item');
+
+        const duracao = t.conteudo === 'Filme'
+            ? `Duração: ${t.duracaoFilme} min`
+            : `Temporadas: ${t.temporada} | Episódios: ${t.episodio} | Duração do Episódio: ${t.duracaoEpisodio} min`;
+
         item.innerHTML = `
-            <strong>${t.nome}</strong> (${t.conteudo}) - ${t.genero}<br>
-            Temporadas: ${t.temporada} | Episódios: ${t.episodio}<br>
-            Classificação: ${t.classificacaoIndicativa}<br>
-            <em>${t.sinopse}</em><br>
-            <button onclick="editarTitulo(${index})">Editar</button>
-            <button onclick="excluirTitulo(${index})">Excluir</button>
+            <div class="info">
+                <h3>${t.nome} (${t.conteudo}) - ${t.genero}</h3>
+                <p>${duracao}</p>
+                <p>Classificação: ${t.classificacaoIndicativa}</p>
+                <p><em>${t.sinopse}</em></p>
+                <div class="botoes">
+                    <button onclick="editarTitulo(${index})">Editar</button>
+                    <button onclick="excluirTitulo(${index})">Excluir</button>
+                </div>
+            </div>
+            <div class="cartaz">
+                <img src="${t.cartaz || 'placeholder.jpg'}" alt="Cartaz de ${t.nome}" />
+            </div>
         `;
         lista.appendChild(item);
     });
 }
+
 
 function editarTitulo(index) {
     const t = titulos[index];

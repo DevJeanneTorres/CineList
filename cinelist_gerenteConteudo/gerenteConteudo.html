@@ -35,7 +35,7 @@
 
             <form id="formTitulo">
                 <label for="nome">Nome do Título:</label>
-                <input type="text" id="nome" name="nome" required placeholder="Digite o nome do título"/>
+                <input type="text" id="nome" name="nome" required placeholder="Digite o nome do título" />
 
                 <label for="conteudo">Conteúdo:</label>
                 <select id="conteudo" name="conteudo" required>
@@ -53,6 +53,7 @@
                     <option value="Comédia">Comédia</option>
                     <option value="Ficção Científica">Ficção Científica</option>
                     <option value="Terror">Terror</option>
+                    <option value="Animação">Animação</option>
                 </select>
 
                 <label for="sinopse">Sinopse:</label>
@@ -68,17 +69,17 @@
                         <label for="temporada">Temporadas:</label>
                         <input type="text" id="temporada" name="temporada" />
                     </div>
-                
+
                     <div>
                         <label for="episodio">Episódios:</label>
                         <input type="text" id="episodio" name="episodio" />
                     </div>
-                
+
                     <div>
                         <label for="duracaoEpisodio">Duração do Episódio (min):</label>
                         <input type="number" id="duracaoEpisodio" name="duracaoEpisodio" />
                     </div>
-                </div>                
+                </div>
 
                 <label for="classificacaoIndicativa">Classificação Indicativa:</label>
                 <select id="classificacaoIndicativa" name="classificacaoIndicativa" required>
@@ -90,7 +91,7 @@
                 </select>
 
                 <label for="cartaz">Adicione o cartaz do título</label>
-                <input type="file" id="cartaz">
+                <input type="file" id="cartaz" name="cartaz" accept="img/*">
 
                 <button type="submit">Cadastrar Título</button>
             </form>
